@@ -1,0 +1,21 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "api/submit.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/submit",
+        "dest": "api/submit.py",
+        "methods": ["POST"]
+      },
+      {
+        "src": "/retrieve",
+        "dest": "api/submit.py",
+        "methods": ["GET"]
+      }
+    ]
+  }
